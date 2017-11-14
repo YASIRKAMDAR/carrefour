@@ -34,8 +34,23 @@ app.post('/api/login', function(req, res, next) {
 });
 
 /* GET Login request. */
-app.get('/api/login', function(req, res, next) {
-  res.send({ resLoggedIn: "Y" });
+app.get('/api/results', function(req, res, next) {
+  res.send({ results : 
+    [{
+      img: "ImgSrc",
+      name: "iphone 6",
+      price: "AED 2000"
+    }
+    ,{
+      img: "ImgSrc",
+      name: "iphone 6s",
+      price: "AED 3000"
+    },{
+      img: "ImgSrc",
+      name: "iphone 7",
+      price: "AED 3700"
+    }]
+   });
 });
 
 // catch 404 and forward to error handler
