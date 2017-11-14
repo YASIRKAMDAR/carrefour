@@ -8,6 +8,12 @@ var bodyParser = require('body-parser');
 //var index = require('./routes/index');
 //var users = require('./routes/users');
 
+
+
+var app = express();
+
+var router = express.Router();
+
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static('client/build'));  
 
@@ -16,10 +22,6 @@ if(process.env.NODE_ENV === 'production'){
     res.sendFile(path.resolve(__dirname, 'client','build', 'index.html'));
   });
 }
-
-var app = express();
-
-var router = express.Router();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
