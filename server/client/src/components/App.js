@@ -11,8 +11,8 @@ const App = () => {
             <BrowserRouter>
             <div className="container">
                 <Header />
-                <Route path="/login" component={LoginForm} />
-                <Route path="/login" component={Results} />
+                <Route  path="/" component={LoginForm} />
+                <Route  path="/" component={Results} />
             </div>
             </BrowserRouter>
         </div>
