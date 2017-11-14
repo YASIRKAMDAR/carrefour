@@ -8,6 +8,15 @@ var bodyParser = require('body-parser');
 //var index = require('./routes/index');
 //var users = require('./routes/users');
 
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static('client/build'));  
+
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client','build', 'index.html'));
+  });
+}
+
 var app = express();
 
 var router = express.Router();
