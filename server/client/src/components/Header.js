@@ -17,6 +17,9 @@ class Header extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+  focusInput(event) {
+    document.getElementById('searchtext').focus();
+  }
   render() {
     return (
       <div>
@@ -30,11 +33,9 @@ class Header extends React.Component {
               <NavItem>
                     <form className="form-inline my-2 my-lg-0">
                       <div className="input-group search-button"> 
-                        <input className="form-control" aria-label="search" placeholder="Search" /> 
                           <div className="input-group-btn"> 
-                            <button type="button" className="btn btn-default" aria-label="Help">
-                              <img src={searchImg} alt="search" />
-                            </button>  
+                              <img src={searchImg} alt="search" onClick={(event) => this.focusInput(event)}  />
+                            <input id="searchtext" className="form-control" aria-label="search" placeholder="Search" /> 
                           </div> 
                         </div>
                     </form>

@@ -21,7 +21,7 @@ class Results extends React.Component {
                 return (
                     <Row className="comp-block" id="resultsBlock">
                         {this.props.results.results.map((result, index) => (
-                            <Col sm="4">
+                            <Col sm="4" key={index}>
                                 <Card>
                                     <CardImg top width="100%" src={resultimg} alt="Card image cap"></CardImg>
                                 </Card>
