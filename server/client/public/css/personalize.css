@@ -1,0 +1,109 @@
+nav 
+{
+    margin-top: 10px;
+}
+nav input:focus::-webkit-input-placeholder { color:#05549f; }
+nav input:focus:-moz-placeholder { color:#05549f; } /* FF 4-18 */
+nav input:focus::-moz-placeholder { color:#05549f; } /* FF 19+ */
+nav input:focus:-ms-input-placeholder { color:#05549f; } /* IE 10+ */
+
+#LoginBlock.row.comp-block {
+    padding-bottom: 80px;
+    padding-top:50px;
+}
+#LoginBlock {
+    border-bottom: 1px solid #f6f6f6;
+}
+#LoginBlock .card {
+    border: 2px solid #f6f6f6;
+    padding: 40px;
+}
+#LoginBlock .card .card-body {
+    padding: 20px 40px;
+}
+.search-button button, .search-button input, .search-button input:focus, .search-button input:active   {
+    background-color: #f0f7fe; 
+    border: none;
+}
+#LoginBlock h4.card-title {
+    color: #414141;
+}
+#LoginBlock h6.card-subtitle {
+    color: #333333;
+}
+/*input lebal animation*/
+#LoginBlock label.helper-label {
+    position: absolute;
+    margin-top: -30px;
+    z-index: -1;
+    margin-left: 12px;
+    color: #414141;
+}
+
+#LoginBlock input:focus + label.helper-label,
+#LoginBlock input:active + label.helper-label {
+    z-index: 0;
+    margin-top: -70px;
+    margin-left: 0px;
+    animation-name: showLabel;
+    animation-duration: .4s;
+}
+#LoginBlock input:focus::-webkit-input-placeholder { color:transparent; }
+#LoginBlock input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+#LoginBlock input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+#LoginBlock input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+@keyframes showLabel {
+    0%   {
+        margin-top: -30px; 
+        z-index: 0;
+        margin-left: 12px;
+    }
+    100% {
+        margin-top: -70px;
+        margin-left: 0px;
+        z-index: 0;
+    }
+}
+#LoginBlock .form-check-label{
+    color: #414141;;
+} 
+#LoginBlock button {
+    background-color: #05549f; 
+}
+#LoginBlock a {
+    color: #05549f;
+}
+.error-message {
+    display: none;
+}
+.error .error-message {
+    background-color: #fff0f1;
+    display: block;
+    color: #f6303f;
+}
+#LoginBlock .form-group.error {
+    margin-top: 10px;
+}
+#LoginBlock .form-group {
+    margin-top: 34px; 
+}
+#LoginBlock .form-group .row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+#LoginBlock .error input, #LoginBlock .error input:focus, #LoginBlock .error input:active {
+    border-color: #f6303f;
+}
+/*results block*/
+#resultsBlock.row.comp-block {
+    padding-top:80px;
+}
+#resultsBlock p.name {
+    color: #414141;
+}
+#resultsBlock p.price {
+    color: #000000;
+}
+#resultsBlock .card {
+    border: 2px solid #f6f6f6;
+}
