@@ -31,9 +31,6 @@ nav input.form-control:active, nav input.form-control:focus,  nav input.form-con
     opacity: 1 !important;
     margin-left: -149px;
 }
-
-
-
 #LoginBlock.row.comp-block {
     padding-bottom: 80px;
     padding-top:50px;
@@ -64,6 +61,12 @@ nav input.form-control:active, nav input.form-control:focus,  nav input.form-con
     color: #414141;
 }
 
+#LoginBlock input:focus ,
+#LoginBlock input:active {
+    border-color: #05549f;
+    box-shadow: 0px 0 2px 3px #f0f7fe;
+}
+
 #LoginBlock input:focus + label.helper-label,
 #LoginBlock input:active + label.helper-label {
     z-index: 0;
@@ -71,11 +74,19 @@ nav input.form-control:active, nav input.form-control:focus,  nav input.form-con
     margin-left: 0px;
     animation-name: showLabel;
     animation-duration: .4s;
+
 }
 #LoginBlock input:focus::-webkit-input-placeholder { color:transparent; }
 #LoginBlock input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
 #LoginBlock input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
 #LoginBlock input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+/*
+#LoginBlock input::-webkit-input-placeholder { color:#f6f6f6; }
+#LoginBlock input:-moz-placeholder { color:#f6f6f6; }
+#LoginBlock input::-moz-placeholder { color:#f6f6f6; } 
+#LoginBlock input:-ms-input-placeholder { color:#f6f6f6; }   */
+
 @keyframes showLabel {
     0%   {
         margin-top: -30px; 
@@ -93,6 +104,9 @@ nav input.form-control:active, nav input.form-control:focus,  nav input.form-con
 } 
 #LoginBlock button {
     background-color: #05549f; 
+}
+#LoginBlock button:focus {
+    box-shadow: 0 0 0 3px rgba(5,84,159,0.2);
 }
 #LoginBlock a {
     color: #05549f;
@@ -112,11 +126,15 @@ nav input.form-control:active, nav input.form-control:focus,  nav input.form-con
     margin-top: 34px; 
 }
 #LoginBlock .form-group .row {
-    margin-right: 0px;
+    margin-right: 3px;
     margin-left: 0px;
 }
 #LoginBlock .error input, #LoginBlock .error input:focus, #LoginBlock .error input:active {
     border-color: #f6303f;
+    
+}
+#LoginBlock .error input:focus, #LoginBlock .error input:active {
+    box-shadow: 0px 0 2px 3px #fff0f1;
 }
 /*results block*/
 #resultsBlock.row.comp-block {
