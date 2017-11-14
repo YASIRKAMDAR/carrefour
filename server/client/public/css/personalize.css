@@ -154,3 +154,6 @@ nav input.form-control:active, nav input.form-control:focus,  nav input.form-con
     margin-right: 0px;
     border-bottom: 1px solid #f6f6f6;
 }
+#resultsBlock .price {
+    font-weight: bold;
+}
