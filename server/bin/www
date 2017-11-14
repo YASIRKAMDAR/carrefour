@@ -22,9 +22,20 @@ app.set('port', port);
 
 var server = http.createServer(app);
 
+
 /**
  * Listen on provided port, on all network interfaces.
  */
+
+if(process.env.NODE_ENV === 'production'){
+  app.use(express.static('client/build'));  
+
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client','build', 'index.html'));
+  });
+}
+
 
 server.listen(port);
 server.on('error', onError);
@@ -78,14 +89,6 @@ function onError(error) {
   }
 }
 
-if(process.env.NODE_ENV === 'production'){
-  app.use(express.static('client/build'));  
-
-  const path = require('path');
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client','build', 'index.html'));
-  });
-}
 
 /**
  * Event listener for HTTP server "listening" event.
