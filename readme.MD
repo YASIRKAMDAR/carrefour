@@ -44,6 +44,8 @@ Assignment task breakup status is as follows:
 ` cd client `
 5) run client app
 ` npm start `
+6) Use the url following url to run the application
+` http://localhost:3000/ `
 
 
 

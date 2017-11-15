@@ -17,6 +17,7 @@ nav .input-group-btn {
     height: 36px;
     padding-left: 5px; 
     padding-right: 5px; 
+    margin-left: 150px;
 }
 
 nav input.form-control {
