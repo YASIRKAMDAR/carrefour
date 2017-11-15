@@ -73,7 +73,7 @@ class LoginForm extends React.Component {
     render() {
         return (
             <Row id="LoginBlock" className="comp-block">
-                <Col md="6" className="mr-auto mx-auto">
+                <Col md="8" lg="6" className="mr-auto mx-auto">
                     <Card>
                         {this.renderLogin()}
                         <CardBody>
